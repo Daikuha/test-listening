@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>クリックで再生できる字幕付きプレイヤー（テンプレート）</title>
+<style>
+body{font-family: system-ui, -apple-system, Segoe UI, Roboto, Noto Sans JP, Helvetica, Arial, sans-serif; line-height:1.6; margin:20px;}
+.header{margin-bottom:12px;}
+.audio-wrap{position:sticky; top:0; background:#fff; padding:12px 0; z-index:10; border-bottom:1px solid #eee;}
+#transcript{max-width: 900px;}
+.cue{padding:8px 10px; border-radius:8px; margin:6px 0; cursor:pointer; transition: background .2s;}
+.cue:hover{background:#f5f7fa;}
+.cue.active{background:#e8f0fe;}
+.time{font-variant-numeric: tabular-nums; color:#555; margin-right:8px;}
+.instructions{font-size:14px; color:#444; background:#f9fafb; padding:8px 10px; border-radius:8px; border:1px solid #eee;}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>クリックで該当箇所を再生（テンプレート）</h1>
+  <div class="instructions">
+    <p><strong>使い方：</strong> 下の <code>&lt;audio&gt;</code> の <code>src="audio.mp3"</code> を、あなたの音声ファイル（例：<code>https://.../audio.mp3</code>）に置き換えて保存してください。各行をクリックすると、その時刻から再生します。</p>
+  </div>
+</div>
+<div class="audio-wrap">
+  <audio id="player" controls preload="metadata" src=「アメリカで始まったＡＩ失業」マイ！Ｂｉｚ.MP3 style="width:100%;"></audio>
+</div>
+<div id="transcript">
+
+<div class="cue" data-start="8" data-end="25"><span class="time">00:08–00:25</span>先月、アメリカのIT大手マイクロソフトが、世界の全従業員の4%にあたる9000人を解雇すると発表するなど、アメリカのIT企業の間ではAIを背景とした人員削減の動きが広がっています。</div>
+<div class="cue" data-start="26" data-end="40"><span class="time">00:26–00:40</span>今、巨大IT企業の集積地、カリフォルニア州のシリコンバレーは、こうした事態をどのように受け止めているのか、シリコンバレーでAI開発会社を経営する石角友愛さんに伺います。</div>
+<div class="cue" data-start="42" data-end="46"><span class="time">00:42–00:46</span>石角さん、よろしくお願いします よろしくお願いします</div>
+<div class="cue" data-start="46" data-end="59"><span class="time">00:46–00:59</span>アメリカのIT企業の間では、AIを背景に人員削減の動きが広がる中、マイクロソフトは5月に6000人、さらに先月9000人規模の削減を発表しました。</div>
+<div class="cue" data-start="60" data-end="67"><span class="time">01:00–01:07</span>これ業績が好調な中での人員削減です。 シリコンバレーではどう受け止められているのでしょうか。</div>
+<div class="cue" data-start="69" data-end="83"><span class="time">01:09–01:23</span>はい、シリコンバレーでは、企業はAIシフトを理由に大量解雇を進める一方で、トップのAI人材を高額報酬で争奪し、少数のAIエリートに依存する戦略を強めています。</div>
+<div class="cue" data-start="84" data-end="94"><span class="time">01:24–01:34</span>これに対し、従業員は将来の雇用に不安を抱き、企業のAIによる効率化という説明に懐疑的な反応を示している人も多くいます。</div>
+<div class="cue" data-start="94" data-end="102"><span class="time">01:34–01:42</span>というのも、マイクロソフトの業績は 絶好調で、特にクラウド事業とAI関連サービスは急成長しています</div>
+<div class="cue" data-start="103" data-end="108"><span class="time">01:43–01:48</span>今回の人員削減は、このAI技術の進歩が要因になっています</div>
+<div class="cue" data-start="108" data-end="125"><span class="time">01:48–02:05</span>マイクロソフトは現在、オープンAIとの提携を軸にした大規模なAI戦略の転換期にあります。従来の製品開発やサポート業務の多くをAIで自動化し、より効率的な組織構造に変えようとしています。</div>
+<div class="cue" data-start="125" data-end="133"><span class="time">02:05–02:13</span>つまり、業績がいいからこそ、次の成長 段階に向けてAIを活用したスリム化を進めているわけです</div>
+<div class="cue" data-start="133" data-end="142"><span class="time">02:13–02:22</span>マイクロソフトに加えまして、6月にはアマゾンのジェシーCEOも AIによる人員削減を明言していますよね</div>
+<div class="cue" data-start="142" data-end="163"><span class="time">02:22–02:43</span>はい、ジャシーCEOが6月に発表した内容も大きな衝撃を与えました。今後数年間で、会社全体でAIを広範囲に使用することで効率性の向上を得られるため、これが総合的な企業労働力を削減すると予想していると明確に宣言したからです。</div>
+<div class="cue" data-start="164" data-end="168"><span class="time">02:44–02:48</span>ジャシーCEOはこの人員削減の背景として3つの理由を挙げています。</div>
+<div class="cue" data-start="169" data-end="191"><span class="time">02:49–03:11</span>まず1つ目として、ユーザーや他のシステムの代わりにさまざまなタスクを実行してくれるAIエージェントが、働き方や生活を大きく変えるということです。具体的には、ウェブ検索やデータ分析、翻訳など、私たちが日常的に行っている多くの作業を自動化してくれます。</div>
+<div class="cue" data-start="191" data-end="214"><span class="time">03:11–03:34</span>2つ目に、AIエージェント技術がアマゾンの顧客イノベーションを大きく変えると述べています。彼によれば、エージェントはより高いレベルからスタートできるため、企業が定型的な作業に時間を費やす必要が減ります。その結果、企業は顧客体験の向上や新しい体験の創出にもっと集中できるようになります。</div>
+<div class="cue" data-start="214" data-end="217"><span class="time">03:34–03:37</span>では3つ目はどんなことでしょうか。</div>
+<div class="cue" data-start="217" data-end="230"><span class="time">03:37–03:50</span>3つ目は、アマゾンを顧客を中心に考え、世界最大のスタートアップのように運営し続けることを目指す。AIがこの変革を大きく助ける役割を果たすとしています。</div>
+<div class="cue" data-start="230" data-end="243"><span class="time">03:50–04:03</span>これまで企業が人員削減を行う際には、市場環境の悪化や事業再編といった理由を使ってきましたが、ジャシーCEOはAIによる効率化と明言しました。</div>
+<div class="cue" data-start="243" data-end="251"><span class="time">04:03–04:11</span>これは経営の透明性を高める一方で、労働者にとっては 厳しい現実を突きつけられたことになります</div>
+<div class="cue" data-start="251" data-end="261"><span class="time">04:11–04:21</span>ということは、今アメリカで起きているAI失業は、 これまでの人員削減と大きく様相が違うということですね  はい</div>
+<div class="cue" data-start="262" data-end="277"><span class="time">04:22–04:37</span>AI失業は従来のリストラとは質的に異なる現象です。これまでの人員削減は景気悪化や事業資金が主な要因でしたが、AI失業は企業の業績が好調な中で起こっています。</div>
+<div class="cue" data-start="277" data-end="297"><span class="time">04:37–04:57</span>具体的には、データ入力、基本的なプログラミング、顧客対応、翻訳、コンテンツ作成、人事など様々な業務がAIに置き換わっています。特に中間管理職や定型業務を担当としていた中堅社員が標的になることが多いです。</div>
+<div class="cue" data-start="298" data-end="313"><span class="time">04:58–05:13</span>また、プログラマーは平均給与が高く、生成AIの導入で多くのプログラマーを必要としなくてもプロダクトが作れる環境が整いつつあるため、生成AIの導入で特にリストラの対象になると言われています。</div>
+<div class="cue" data-start="314" data-end="332"><span class="time">05:14–05:32</span>興味深いのは、この流れが 効率化の名の下で進められていることです　企業は AIを導入することで、残された従業員はより創造的で価値の高い仕事に 集中できると説明しますが、実際には多くの労働者が職を失っているのが現状です</div>
+<div class="cue" data-start="334" data-end="341"><span class="time">05:34–05:41</span>多くの失業者が生まれれば、影響も大きくなります その中で、アメリカのAI業界はどう対応すべきでしょうか</div>
+<div class="cue" data-start="342" data-end="361"><span class="time">05:42–06:01</span>アメリカのAI業界には大きな社会的責任があると考えています。まず、人員削減を行う際には、透明性と計画性を確保することが重要です。突然の大量解雇ではなく、段階的に移行し、従業員に再訓練の機会を提供すべきです。</div>
+<div class="cue" data-start="363" data-end="375"><span class="time">06:03–06:15</span>実際に、一部の先進企業はリスキリングプログラムに大規模な投資を行っています。例えば、MICROSOFTも、影響を受ける従業員にAI関連のスキルを学ぶ支援をしています。</div>
+<div class="cue" data-start="375" data-end="378"><span class="time">06:15–06:18</span>対応はそういったことだけで十分でしょうか？</div>
+<div class="cue" data-start="379" data-end="400"><span class="time">06:19–06:40</span>はい、業界全体として、AI倫理の確立が急務だと考えます。AI倫理とは、AIを開発利用する際に考慮すべき道徳的な原則や価値観のことですが、従業員などを含めたステークホルダーの意見も尊重し、AI倫理の理想を考えることが大切です。</div>
+<div class="cue" data-start="400" data-end="414"><span class="time">06:40–06:54</span>例えば、ハーバードビジネスレビューの研究によれば、生成AIを使って働く従業員は、全く使わない従業員に比べて仕事のモチベーションに波があることが分かっています。</div>
+<div class="cue" data-start="414" data-end="429"><span class="time">06:54–07:09</span>これは効率化や生産性だけではなく、仕事の仕方やモチベーションにも影響を与えることを示しています。したがって、現場で働く人たちや管理者に寄り添った総合的なAI倫理の確立が必要です。</div>
+<div class="cue" data-start="430" data-end="444"><span class="time">07:10–07:24</span>AIによって失業が増えると聞きますと、心配になるのが、日本でも同様のことが起こるのかということです。実際どうでしょうか。そして、日本の企業が考えるべきことなどと合わせて教えてください。</div>
+<div class="cue" data-start="445" data-end="461"><span class="time">07:25–07:41</span>はい。日本でもAIによる雇用の変化が確実に起こると考えていますが、アメリカとは異なる特徴があると思います。日本の企業は終身雇用制度があるため、アメリカほど急激な人員削減が難しい環境です。</div>
+<div class="cue" data-start="461" data-end="470"><span class="time">07:41–07:50</span>しかし、それは問題を先送りにしているに過ぎません。むしろ、時間があるうちに計画的に対応することが重要だと思います。</div>
+<div class="cue" data-start="470" data-end="481"><span class="time">07:50–08:01</span>日本企業が参考にできるのは、アメリカ企業の失敗事例です。突然の大量解雇は、社会からの批判を受け、企業のブランドにも悪影響を及ぼします。</div>
+<div class="cue" data-start="482" data-end="492"><span class="time">08:02–08:12</span>そこで日本企業はAIを導入する際に従業員のスキル転換を支援し、人とAIが協力するモデルを構築すべきです。</div>
+<div class="cue" data-start="493" data-end="510"><span class="time">08:13–08:30</span>重要なのは、AI導入をコスト削減ではなく、価値創造の手段として捉えることです。従業員と共にAI時代の新しい働き方を模索する企業が、最終的には競争力を高めることができると思います。</div>
+<div class="cue" data-start="510" data-end="514"><span class="time">08:30–08:34</span>石角さん、ありがとうございました。 ありがとうございました。</div>
+<div class="cue" data-start="514" data-end="525"><span class="time">08:34–08:45</span>今朝マイビズのは、AIを背景としたアメリカでの人員削減の動きについて、シリコンバレーでAI開発会社を経営している石角友愛さんに伺いました。</div>
+
+</div>
+<script>
+const player = document.getElementById('player');
+const cues = Array.from(document.querySelectorAll('.cue'));
+
+function jumpTo(seconds){
+  player.currentTime = seconds + 0.01; // nudge
+  player.play();
+}
+
+cues.forEach(c => {
+  c.addEventListener('click', () => {
+    jumpTo(parseFloat(c.dataset.start));
+  });
+});
+
+// Highlight active cue during playback
+function refreshActive(){
+  const t = player.currentTime;
+  cues.forEach(c => {
+    const a = parseFloat(c.dataset.start);
+    const b = parseFloat(c.dataset.end);
+    if(t >= a && t < b){ c.classList.add('active'); }
+    else { c.classList.remove('active'); }
+  });
+}
+player.addEventListener('timeupdate', refreshActive);
+</script>
+</body>
+</html>
